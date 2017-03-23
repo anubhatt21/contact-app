@@ -1,0 +1,13 @@
+<h1> All Contacts </h1>
+<% if current_user %>
+<h3> Hi <%= current_user.name %>!</h3>
+<% end %>
+<% @contacts.each do |contact| %>
+<p>
+Added <%= contact.friendly_created_at %> <br>
+Name: <%= contact.full_name %> <br>
+Email: <%= contact.email %> <br>
+Phone Number: <%= contact.isd_code %> <br>
+</p>
+<% end %>
+

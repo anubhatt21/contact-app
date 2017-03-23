@@ -1,0 +1,7 @@
+    <h1>Contact Info</h1>
+    <% @contact.each do |contact| %>
+      <p>
+      <li>Name: <%= contact.first_name %> <%= @contact.middle_name %> <%= contact.last_name %> <br> Email: <%= contact.email %>  <br> Contact:<%= contact.phone_number %> </li>
+      </p>
+      <a href="/one_contact_url/<%= contact.id %>">More info</a>
+  <% end %>
