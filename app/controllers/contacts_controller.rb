@@ -10,12 +10,8 @@ class ContactsController < ApplicationController
   # end
 
   def index
-    if current_user
-      @contacts = user.contacts
-    else
-      @contacts = Contact.all
+      @contacts = current_user.contacts
       render "index.html.erb"
-    end
   end 
 
   def new
