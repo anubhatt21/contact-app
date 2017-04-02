@@ -1,6 +1,11 @@
 class Contact < ApplicationRecord
   belongs_to :user
 
+  validates :email, presence: true
+  validates :email, uniqueness: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+
   def friendly_created_at
     created_at.strftime("%B, %e, %Y")
   end
